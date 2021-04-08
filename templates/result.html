@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+     <div>
+         <ul class="list-group list-group-flush">
+          {% for r in rlist %}
+            <li class="list-group-item" style="color:rgb(0, 179, 0)"><strong>{{r|capitalize}}</strong> </li>
+           
+          {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}

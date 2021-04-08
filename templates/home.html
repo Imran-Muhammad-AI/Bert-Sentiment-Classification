@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="shadow p-3 mb-5 bg-white rounded">
+  <h1 style="color:rgb(0, 102, 255)">AI in Enterprise Project : Sentiment Analysis</h1>
+ </div>
+ <div>
+     <form action="{{url_for('predict')}}">
+        <input type="text" name="sentence" class="form-control" placeholder="input sentiment here">
+        <br>
+        <input type="submit" class="btn btn-info" value="Enter">
+     </form>
+ </div>
+ </br></br>
+  <div>
+         <ul class="list-group list-group-flush">
+          {% for r in rlist %}
+            <li class="list-group-item" style="color:rgb(0, 179, 0)"><strong>{{r|capitalize}}</strong> </li>
+           
+          {% endfor %}
+        </ul>
+   </div>
+{% endblock %}
